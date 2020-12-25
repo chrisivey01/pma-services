@@ -1,13 +1,13 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import routes from "./routes/hello.js";
+import userRouter from "./routes/users.js";
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(routes);
+app.use(userRouter);
 
-app.listen(3000, () => console.log("listening on port 3000"));
+app.listen(5000, () => console.log("listening on port 5000"));
